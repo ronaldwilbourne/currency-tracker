@@ -22,10 +22,29 @@
 .content-container{
   width: 100%;
   min-height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  justify-items: center;
 }
+.itemDiv{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin:20px 0;
+  transition: 0.5s ease;
+}
+
+.itemDiv:hover{
+  transform: scale(1.2);
+}
+
 img{
-  width
+  width: 250px;
+  height: 250px;
+  border: 1px solid rgba(rgb(99, 12, 12), rgb(2, 61, 2), rgb(8, 8, 59), alpha);
+  border-radius: 5px;
 }
+
 .footer{
   width: 100%;
   height: 10vh;
