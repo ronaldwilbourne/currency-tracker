@@ -13,13 +13,23 @@ const Content = () => {
             
         }).then(res=> {
           console.log(res.data);
-        })
+          setData(res.data.response)
+        }).catch (e => console.log(e))
     },[] )
 
 
 
   return (
-    <div className='content-container'> Content</div>
+    <div className='content-container'>
+      {data.map((item) =>(
+        <div className='itemDiv' key={item.title}>
+          <div className='itemHeading'><h4>{item.title}</h4></div>
+          <div className='itemImage'>
+            <img src={item.thumbnail} alt='#'/>
+          </div>
+        </div>
+      ))}
+    </div>
   )
 }
 
