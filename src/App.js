@@ -1,7 +1,6 @@
 
-import { useState } from 'react';
+import React from 'react';
 import './App.css';
-import parse from "html-react-parser";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Content from './components/Content';
