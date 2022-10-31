@@ -22,7 +22,10 @@ const Content = () => {
   return (
     <div className='content-container'>
       {data.map((item) =>(
-        <div className='itemDiv' key={item.title}>
+        <div className='itemDiv' 
+        key={item.title}
+        onClick={() => window.open(item.matchviewUrl
+          )}>
           <div className='itemHeading'><h4>{item.title}</h4></div>
           <div className='itemImage'>
             <img src={item.thumbnail} alt='#'/>
